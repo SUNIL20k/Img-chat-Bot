@@ -45,7 +45,11 @@ const Sidebar=({ handleClear })=>{
                 <div className="history-box">
                   {
                     name.map((item,index)=>(
-                       <p key={index} className="history"><i class="bi bi-chat-left"></i> {item.ImgName}  <button onClick={() => handleDelete(item.id)}>Delete</button></p>
+                      <div className="history">
+                        <p key={index} className="history-text"><i class="bi bi-chat-left"></i> {item.ImgName} </p>
+                        <button onClick={() => handleDelete(item.id)} className="delete"><i class="bi bi-trash"></i></button>
+                      </div>
+                      //  <p key={index} className="history"><i class="bi bi-chat-left"></i> {item.ImgName}  <button onClick={() => handleDelete(item.id)}>Delete</button></p>
                     ))
                   }
                 </div>

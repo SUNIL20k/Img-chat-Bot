@@ -131,7 +131,7 @@ const Imgbody = ({ search, handleDel } ) => {
                   <div className="pro">
                     <img src={aico} className="profile"></img>
                   </div>
-                  <div style={{ marginLeft: "20px" }}>
+                  <div className="img-body">
                     <h3 className="text-white mb-3">
                       pixel <sup className="fs-6 mb-5"> [Ai]</sup>
                     </h3>
@@ -188,9 +188,9 @@ const Imgbody = ({ search, handleDel } ) => {
             <input
               type="text"
               ref={data}
-              placeholder="Enter image name EX: pig, dog"
+              placeholder="Enter prompt"
             />
-            <button onClick={image}>Send</button>
+            <button onClick={image}><span className="send">Send </span><i class="bi bi-send"></i></button>
           </div>
         </div>
       </div>
